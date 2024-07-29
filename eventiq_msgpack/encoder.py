@@ -11,6 +11,6 @@ class MsgPackEncoder:
 
     def encode(self, data: BaseModel) -> bytes:
         try:
-            return ormsgpack.packb(data, **self.options)
+            return ormsgpack.packb(data.model_dump(), **self.options)
         except ormsgpack.MsgpackEncodeError as e:
             raise EncodeError from e
