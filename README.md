@@ -11,3 +11,10 @@
 # eventiq-msgpack
 
 MessagePack encoder for eventiq
+
+
+## Installation
+
+```shell
+pip install eventiq-msgpack
+```

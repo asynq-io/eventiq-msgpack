@@ -12,16 +12,20 @@ license = "Apache-2.0"
 keywords = []
 authors = []
 classifiers = [
-    "Development Status :: 4 - Beta",
-    "Programming Language :: Python",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Framework :: AsyncIO",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: Implementation :: CPython",
-    "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dependencies = ["ormsgpack>=1.2.5,<2.0", "eventiq==0.3.0rc0"]
+dependencies = ["ormsgpack>=1.2.5,<2.0", "eventiq>=1.0.0"]
 
 [project.urls]
 Documentation = "https://github.com/asynq-io/eventiq-msgpack#readme"
@@ -32,14 +36,7 @@ Source = "https://github.com/asynq-io/eventiq-msgpack"
 path = "eventiq_msgpack/__about__.py"
 
 [tool.hatch.envs.default]
-dependencies = [
-    "pytest",
-    "pyyaml",
-    "pytest-cov",
-    "ruff",
-    "mypy>=1.0.0",
-    "bandit",
-]
+dependencies = ["pytest", "pyyaml", "pytest-cov", "ruff", "mypy", "bandit"]
 
 [tool.hatch.envs.default.scripts]
 test = "pytest {args:tests}"
